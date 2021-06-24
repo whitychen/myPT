@@ -57,13 +57,13 @@ int main(int argc, char *argv[])
     Group *mygroup = myscene.getGroup();
     Image output(mycamera->getWidth(), mycamera->getHeight());
 
-    // double a[4] = {-0.8, 0.0, -0.4, 0.8};
-    // double b[4] = {1, 0, 0.6, 0.8};
-    // BezierCurve vasecurve(a, b, 4);
-    // Object3D *vase = new Bezier(Vector3f(0, 0, 1), vasecurve);
-    // mygroup->addObject(0, vase);
+    double a[4] = {0.3, 0.4, 0.1, 0.2};
+    double b[4] = {0, 0.4, 0.5, 0.9};
+    BezierCurve vasecurve(a, b, 4);
+    Object3D *vase = new Bezier(Vector3f(0.3, 0, -0.5), vasecurve);
+    mygroup->addObject(0, vase);
 
-    int samps = 10000;
+    int samps = 10;
 
     int h = mycamera->getHeight();
     int w = mycamera->getWidth();

@@ -84,23 +84,27 @@ public:
     Vector3f pos;
     BezierCurve curve;
     Vector3f norm;
-    float hmin, hmax, dmax;
+    float hmin, hmax, dmax, dmin;
     Bezier(Vector3f p, BezierCurve c) : pos(p), curve(c), norm(Vector3f::ZERO)
     {
-        this->material = new Material((0.5, 0.3, 0.5), 2);
-        dmax = -1;
+        this->material = new Material((0.8, 0.0, 0.5), 2);
+        dmin = 1e20, dmax = -1;
         hmin = 1e20, hmax = -1;
         for (double t = 0; t <= 1; t += 1e-3)
         {
             Vector3f cur = curve.evaluate(t).V;
             dmax = max(abs(cur.x()), dmax);
+            dmin = min(abs(cur.x()), dmin);
             hmax = max(abs(cur.y()), hmax);
             hmin = min(abs(cur.y()), hmin);
         }
+        box = AABB(Vector3f(-dmax + pos.x(), hmin + pos.y(), -dmax + pos.z()), Vector3f(dmax + pos.x(), hmax + pos.y(), dmax + pos.z())); //todo
     }
     //
     bool intersect(const Ray &r, Hit &h, float tmin) override
     {
+        if (!box.intersect(r))
+            return false;
         Vector3f cross = Vector3f::cross(r.direction, Vector3f(0, 1, 0));
         double dis = abs(Vector3f::dot(cross, r.origin - pos)) / cross.length();
         if (dis > dmax)
