@@ -1,6 +1,6 @@
-/mnt/f/大二下/图形学/大作业/code/build/CMakeFiles/rebuild_cache.dir
-/mnt/f/大二下/图形学/大作业/code/build/CMakeFiles/edit_cache.dir
-/mnt/f/大二下/图形学/大作业/code/build/CMakeFiles/PA1.dir
-/mnt/f/大二下/图形学/大作业/code/build/deps/vecmath/CMakeFiles/rebuild_cache.dir
-/mnt/f/大二下/图形学/大作业/code/build/deps/vecmath/CMakeFiles/edit_cache.dir
-/mnt/f/大二下/图形学/大作业/code/build/deps/vecmath/CMakeFiles/vecmath.dir
+/root/test/myPT/build/CMakeFiles/rebuild_cache.dir
+/root/test/myPT/build/CMakeFiles/edit_cache.dir
+/root/test/myPT/build/CMakeFiles/PA1.dir
+/root/test/myPT/build/deps/vecmath/CMakeFiles/rebuild_cache.dir
+/root/test/myPT/build/deps/vecmath/CMakeFiles/edit_cache.dir
+/root/test/myPT/build/deps/vecmath/CMakeFiles/vecmath.dir

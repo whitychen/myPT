@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/f/大二下/图形学/大作业/code/src/image.cpp" "/mnt/f/大二下/图形学/大作业/code/build/CMakeFiles/PA1.dir/src/image.cpp.o"
-  "/mnt/f/大二下/图形学/大作业/code/src/main.cpp" "/mnt/f/大二下/图形学/大作业/code/build/CMakeFiles/PA1.dir/src/main.cpp.o"
-  "/mnt/f/大二下/图形学/大作业/code/src/mesh.cpp" "/mnt/f/大二下/图形学/大作业/code/build/CMakeFiles/PA1.dir/src/mesh.cpp.o"
-  "/mnt/f/大二下/图形学/大作业/code/src/scene_parser.cpp" "/mnt/f/大二下/图形学/大作业/code/build/CMakeFiles/PA1.dir/src/scene_parser.cpp.o"
+  "/root/test/myPT/src/image.cpp" "/root/test/myPT/build/CMakeFiles/PA1.dir/src/image.cpp.o"
+  "/root/test/myPT/src/main.cpp" "/root/test/myPT/build/CMakeFiles/PA1.dir/src/main.cpp.o"
+  "/root/test/myPT/src/mesh.cpp" "/root/test/myPT/build/CMakeFiles/PA1.dir/src/mesh.cpp.o"
+  "/root/test/myPT/src/scene_parser.cpp" "/root/test/myPT/build/CMakeFiles/PA1.dir/src/scene_parser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,7 +19,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/mnt/f/大二下/图形学/大作业/code/build/deps/vecmath/CMakeFiles/vecmath.dir/DependInfo.cmake"
+  "/root/test/myPT/build/deps/vecmath/CMakeFiles/vecmath.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
