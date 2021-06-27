@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
     Object3D *vase2 = new Bezier(Vector3f(-0.5, 0, 1.0), vasecurve);
     mygroup->addObject(0, vase2);
 
-    int samps = 100;
+    int samps = 500;
 
     int h = mycamera->getHeight();
     int w = mycamera->getWidth();
