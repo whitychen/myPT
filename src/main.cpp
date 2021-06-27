@@ -30,7 +30,7 @@ unsigned char *texture;
 int texture_w, texture_h, texture_channl;
 int main(int argc, char *argv[])
 {
-    // texture = stbi_load("texture/neptune.jpg", &texture_w, &texture_h, &texture_channl, 0);
+    texture = stbi_load("texture/vase.png", &texture_w, &texture_h, &texture_channl, 0);
     // std::cerr << texture_w << " " << texture_h << " " << texture_channl << std::endl;
 
     for (int argNum = 1; argNum < argc; ++argNum)
@@ -60,10 +60,13 @@ int main(int argc, char *argv[])
     double a[4] = {0.3, 0.4, 0.1, 0.2};
     double b[4] = {0, 0.4, 0.5, 0.9};
     BezierCurve vasecurve(a, b, 4);
-    Object3D *vase = new Bezier(Vector3f(0.3, 0, -0.5), vasecurve);
+    Object3D *vase = new Bezier(Vector3f(0.5, 0, -0.5), vasecurve);
     mygroup->addObject(0, vase);
 
-    int samps = 10;
+    Object3D *vase2 = new Bezier(Vector3f(-0.5, 0, 1.0), vasecurve);
+    mygroup->addObject(0, vase2);
+
+    int samps = 1000;
 
     int h = mycamera->getHeight();
     int w = mycamera->getWidth();

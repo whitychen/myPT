@@ -87,7 +87,7 @@ public:
     float hmin, hmax, dmax, dmin;
     Bezier(Vector3f p, BezierCurve c) : pos(p), curve(c), norm(Vector3f::ZERO)
     {
-        this->material = new Material((0.8, 0.0, 0.5), 2);
+        this->material = new Material((0.8, 0.0, 0.5), 3);
         dmin = 1e20, dmax = -1;
         hmin = 1e20, hmax = -1;
         for (double t = 0; t <= 1; t += 1e-3)

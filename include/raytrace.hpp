@@ -53,13 +53,13 @@ Vector3f RayTracing(const Ray &camray, int depth, unsigned short *Xi, Group *myg
         Vector3f v = Vector3f::cross(w, u);
         Vector3f d = (u * cos(r1) * r2s + v * sin(r1) * r2s + w * sqrt(1 - r2)).normalized();
 
-        // if (shine == 3)
-        // {
-        //     int idx = ((int)(abs(1000 * x.x())) % texture_w +
-        //                (int)(abs(1000 * x.y())) % texture_h * texture_w) *
-        //               texture_channl;
-        //     f = Vector3f(texture[idx + 0], texture[idx + 1], texture[idx + 2])/255;
-        // }
+        if (shine == 3)
+        {
+            int idx = ((int)(abs(1000 * x.x())) % texture_w +
+                       (int)((abs(x.y() / 2.0)) * texture_h) * texture_w) *
+                      texture_channl;
+            f = Vector3f(texture[idx + 0], texture[idx + 1], texture[idx + 2]) / 255;
+        }
 
         return e + f * (RayTracing(Ray(x, d), depth, Xi, mygroup)); //颜色*光强
     }

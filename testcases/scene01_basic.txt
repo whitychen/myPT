@@ -54,17 +54,7 @@ Background {
 }
 
 Group {
-    numObjects 11
-    MaterialIndex 4
-    Transform {
-        XRotate  0 
-	    YRotate  30 
-        ZRotate  0 
-        Scale 1 1 1 
-        TriangleMesh {
-             obj_file mesh/cube.obj
-        }
-    }
+    numObjects 6
     MaterialIndex 1
     Plane {
     normal -1 0 0
@@ -90,36 +80,10 @@ Group {
     normal 0 0 1
         offset -1
     }
-    MaterialIndex 5
-     Transform {
-        Translate  0 0 0.5
-        XRotate  0 
-	    YRotate  0 
-        ZRotate  0 
-        Scale 1 1 1
-        TriangleMesh {
-        obj_file mesh/bunny_1k.obj
-        }
-    }
-    MaterialIndex 5
-    Sphere {
-        center 0.4 0.1 1.1
-        radius 0.1
-    }
     MaterialIndex 0
     Sphere {
     center 0 3 0 
         radius 1.1 
-    }
-    MaterialIndex 6
-    Sphere {
-    center 0.55 1.50 -0.35 
-        radius 0.35 
-    }
-    MaterialIndex 4
-    Sphere {
-    center -0.8 1.50 0.2
-        radius 0.25 
     }
 }
 
