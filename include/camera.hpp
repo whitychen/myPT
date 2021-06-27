@@ -51,7 +51,7 @@ public:
         // angle is in radian.
         fx = (width / 2) / tan(angle / 2);  //单位坐标表示的像素大小
         fy = (height / 2) / tan(angle / 2); //单位坐标表示的像素大小
-        focus = (center - Vector3f(-0.5, 0, 1.4)).length();
+        focus = (center - Vector3f(-0.5, 0, 1.1)).length();
     }
 
     Ray generateRay(const Vector2f &point) override
