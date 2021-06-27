@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
     Object3D *vase2 = new Bezier(Vector3f(-0.5, 0, 1.0), vasecurve);
     mygroup->addObject(0, vase2);
 
-    int samps = 1000;
+    int samps = 500;
 
     int h = mycamera->getHeight();
     int w = mycamera->getWidth();
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
                         double r2 = 2 * erand48(Xi), dy = r2 < 1 ? sqrt(r2) - 1 : 1 - sqrt(2 - r2);
                         Vector3f d = cx * (((sx + .5 + dx) / 2 + x) / w - .5) +
                                      cy * (((sy + .5 + dy) / 2 + y) / h - .5) + cam.getDirection();
-
+                        //加入随机因素抗锯齿
                         auto camray = mycamera->generateRay(Vector2f((sx + .5 + dx) / 2 + x, (sy + .5 + dy) / 2 + y));
                         r = r + RayTracing(camray, 0, Xi, mygroup) * (1. / samps);
                     }

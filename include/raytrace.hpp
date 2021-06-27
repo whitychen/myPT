@@ -49,7 +49,7 @@ Vector3f RayTracing(const Ray &camray, int depth, unsigned short *Xi, Group *myg
         double r1 = 2 * M_PI * erand48(Xi);
         double r2 = erand48(Xi), r2s = sqrt(r2); //随机一个球
         Vector3f w = nl;
-        Vector3f u = Vector3f::cross(fabs(w.x()) > .1 ? Vector3f(0, 1, 0) : Vector3f(1, 0, 0), w).normalized(); //todo
+        Vector3f u = Vector3f::cross(fabs(w.x()) > .1 ? Vector3f(0, 1, 0) : Vector3f(1, 0, 0), w).normalized(); 
         Vector3f v = Vector3f::cross(w, u);
         Vector3f d = (u * cos(r1) * r2s + v * sin(r1) * r2s + w * sqrt(1 - r2)).normalized();
 
@@ -68,7 +68,7 @@ Vector3f RayTracing(const Ray &camray, int depth, unsigned short *Xi, Group *myg
         return e + f * (RayTracing(reflRay, depth, Xi, mygroup));
 
     bool into = Vector3f::dot(n, nl) > 0;
-    double nc = 1, nt = 1.5, nnt = into ? nc / nt : nt / nc, ddn = Vector3f::dot(nl, camray.direction), cos2t; //折射系数 //todo
+    double nc = 1, nt = 1.5, nnt = into ? nc / nt : nt / nc, ddn = Vector3f::dot(nl, camray.direction), cos2t; //折射系数
     if ((cos2t = 1 - nnt * nnt * (1 - ddn * ddn)) < 0)                                                         //全反射                                                   // 全反射
         return e + f * (RayTracing(reflRay, depth, Xi, mygroup));
 
